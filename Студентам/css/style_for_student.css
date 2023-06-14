@@ -1,0 +1,549 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+@font-face {
+  font-family: "FormularLight";
+  src: url("../fonts/FormularLight/FormularLight.eot");
+  src: url("../fonts/FormularLight/FormularLight.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularLight/FormularLight.woff") format("woff"), url("../fonts/FormularLight/FormularLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "FormularMedium";
+  src: url("../fonts/FormularMedium/FormularMedium.eot");
+  src: url("../fonts/FormularMedium/FormularMedium.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularMedium/FormularMedium.woff") format("woff"), url("../fonts/FormularMedium/FormularMedium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "FormularBold";
+  src: url("../fonts/FormularBold/FormularBold.eot");
+  src: url("../fonts/FormularBold/FormularBold.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularBold/FormularBold.woff") format("woff"), url("../fonts/FormularBold/FormularBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "FormularLight";
+  font-style: normal;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: normal;
+  color: black;
+  background: url(../img/fonn.jpg) no-repeat center;
+  background-size: cover;
+
+}
+
+
+.main{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1160px;
+  
+}
+
+.wrapper {
+  max-width: 1160px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/*Header start*/
+.header {
+  /*    position: absolute; Возможно нужно для корректного отображения фона*/
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.header_wrapper {
+  display: flex; /*Размещает елемены в строку*/
+  flex-wrap: wrap; /*Позволяет размещать жлементы в несколько рядов*/
+  align-items: center; /*По оси выравнивание по центру*/
+  justify-content: space-evenly;
+  margin-top: 4px;
+  
+  border-radius: 30px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+
+
+/*Кнопка поиска*/
+.group {
+  display: flex;
+  line-height: 24px;
+  align-items: center;
+  position: relative;
+  max-width: 140px;
+}
+
+.input {
+  width: 100%;
+  height: 30px;
+  line-height: 28px;
+  padding: 0 1rem;
+  padding-left: 2.5rem;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  outline: none;
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  transition: .3s ease;
+}
+
+  .input::placeholder {
+      color: #9e9ea7;
+  }
+
+  .input:focus, input:hover {
+      outline: none;
+      border-color: rgba(72, 219, 232, 0.4);
+      background-color: #fff;
+      box-shadow: 0 0 0 4px rgba(59, 157, 218, 0.1);
+  }
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  fill: #9e9ea7;
+  width: 1rem;
+  height: 1rem;
+}
+
+.header_logo {
+  margin-right: 5px; /*Чтобы при уменьшении экрана об институте не наезжал на логотип*/
+}
+
+
+.header_list {
+  display: flex; /*Список был в строчке*/
+  flex-wrap: wrap;
+}
+
+.header_items {
+  margin-right: 30px;
+  height: 30px;
+  margin-top: 4px;
+}
+
+.header_link {
+  font-family: 'Formular';
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+  text-decoration: none;
+}
+/*Header end*/
+
+
+/*Intra start*/
+
+.intro{
+  padding-top: 50px;
+}
+
+
+.intro_title{
+font-family: 'Formular';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 49px;
+text-align: center;
+color: rgba(0, 0, 0, 0.5);
+margin-bottom: 50px;
+padding-top: 45px;
+white-space: normal;
+}   
+
+/*Intra end*/
+
+.box-small {
+  width: 30%;
+  height: auto;
+  background-color: #D9D9D9;
+  text-align: center;
+  padding: 20px ;
+  position: relative;
+  margin: 8px;
+  float: left;
+  border-radius: 30px;
+}
+
+.box-large {
+  width: 95%;
+  height: auto;
+  background-color: #21BECE;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  margin: 8px;
+  float: left;
+  border-radius: 30px;
+}
+
+.box-small.arrow-right:after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 80%;
+  border-top: 15px solid transparent;
+  border-right: none;
+  border-left: 40px solid #D9D9D9;
+  border-bottom: 15px solid transparent;
+  transform: rotate(45deg);
+}
+
+.box-large.arrow-left:after {
+  content: " ";
+  position: absolute;
+  left: -20px;
+  top: 95%;
+  border-top: 15px solid transparent;
+  border-right: 40px solid #21BECE;
+  border-left: none;
+  border-bottom: 15px solid transparent;
+  transform: rotate(-45deg);
+
+}
+
+.message_grey{
+  display: flex;
+  flex-direction: row-reverse; 
+}
+.message_tiffani{
+  display: flex;  
+}
+
+.cards_stip{ /*здесь все для того чтоб сайт был адаптивен*/
+    display: flex;  
+    justify-content: space-around;
+    flex-wrap: wrap; /*разрешение переноса объектов на новую строку*/
+    width: 100%;
+  }
+
+.flip-card {
+    width: 260px;
+    height: 320px;
+    perspective: 1000px;
+    font-family: "Formular", sans-serif;
+    margin: 0 20px 20px 20px;
+  }
+  
+.title { /*Описание стиля для названия стипы*/
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 30px; /*Отступ от верха карточки*/
+    margin-bottom: 0;
+  }
+
+.under_title { /*Описание стиля для размера стипы*/
+    font-size: 40px;
+    font-weight: 400;
+    margin-top: 50px; /*Отступ от предыдущего текста*/
+    margin-bottom: 0;
+  }
+
+.rub { /*аналогично предыдущим стилям*/
+    font-size: 15px; 
+    font-weight: 400;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 0;
+  }
+.more_info {
+    font-size: 12px; 
+    font-weight: 400;
+    text-align: right;
+    position: absolute;
+    color: #21BECE;
+    bottom: 8px;
+    right: 8px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    text-decoration: none;
+
+  }
+
+.under_title_back { /*Описание стиля для стипы на другой стороне карточки*/
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 50px; /*Отступ от верха*/
+    margin-bottom: 0;
+  }
+  /*далее все аналогчино описаным выше стилям*/
+.under_title_small {
+    font-size: 15px; 
+    font-weight: 400;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+.under_title_small_back {
+    font-size: 15px; 
+    font-weight: 400;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+
+.more_info_back {
+    font-size: 12px; 
+    font-weight: 400;
+    text-align: right;
+    position: absolute;
+    color: #ffffff;
+    bottom: 8px;
+    right: 8px;
+    margin-top: 5px;
+    margin-bottom: 0;
+    text-decoration: none;
+
+  }
+  
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.5s; /*время анимации*/
+    transform-style: preserve-3d; /*чтоб красиво переворачивалось именно на другую сторону*/
+  }
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg); /*градус поворота по Оу передней части карточки*/
+  }
+  
+.flip-card-front, .flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 2px solid black;
+    border-radius: 1rem;
+  }
+  
+.flip-card-front { /*описание стилей для карточки спереди*/
+    background:white;
+    color: black;
+  }
+  
+.flip-card-back { /*описание стилей для карточки сзади*/
+    background: #21BECE;
+    color: white;
+    transform: rotateY(180deg); /*изначально как бы разворачиваем заднюю часть карточки, чтоб она стала действительно сзади*/
+    border:#21BECE;
+  }
+
+.more_about_stip { /*описание гиперссылки после блока со стипендиями*/
+    display: flex;
+    flex-direction: row-reverse; /*разворачиваем ось флекс модели чтоб сэкономить себе время и не париться с выравниванием*/
+    text-decoration: none; /*чтоб не было подчеркивания у гиперссылки*/
+    margin-top: 10px;
+    margin-right: 10px;
+    color: #21BECE;
+  }
+
+.subscribe { /*блок с рекомендациями к подписке*/
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 100%;
+    margin-top: 120px;
+    border-radius: 30px;
+  } 
+
+.subscribe_text {
+   text-align: center;
+   margin-top: 10px;
+   font-size: 20px;
+  }
+
+.social_media_links { /*так же это все для адаптивности*/
+  display: flex; /*эта часть для того чтоб объединить все кружочки с ссылками*/
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.social_media {  /*а эта часть для того, чтоб объединить картинку и текст*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column; /*направляем ось вниз, чтоб текст шел под картинкой*/
+  width: 300px;
+  height: 169px;
+  margin-top: 20px;
+}
+
+.social_media_img {
+  width: 100px;
+  align-self: center;
+}
+
+.social_media_text {
+  margin-top: 5px;
+  text-align: center;
+}
+
+
+
+.cards_activities { /*аналогчино предыдущему блоку про социальные медиа*/
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  font-weight: 400;
+  color: black;
+}
+
+
+.go-corner {
+  display: block;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 4px;
+  right: 4px;
+  background-color: #21BECE;
+  border-radius: 0 4px 0 32px;
+}
+
+
+.card {
+  display: flex;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  border: 2px solid #21BECE;
+  border-radius: 30px; 
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+
+}
+
+.card:before { /*описание стилей для анимации карточки*/
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -16px;
+  right: -16px;
+  background: #21BECE;
+  color: white;
+  height: 64px;
+  width: 64px;
+  border-radius: 32px;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.25s ease-out; 
+}
+.card:hover{  
+  color: #fff;
+  transition: 0.35s;
+}
+.card p{
+  margin: 0 0 10px 0;
+
+}
+.card_img{
+  max-width:289px;
+  width: 100%;
+  float: right;
+  align-self: center;
+  margin-left: 100px;
+}
+.card:hover:before {
+  transform: scale(21);
+}
+
+
+@media only screen and (min-width:240px) and (max-width: 767px){
+  .box-small{
+      width: 30%;
+      display: block;
+      float: none;
+      margin-right: 20px;
+  }
+  .intro_title{
+    font-size: 30px;
+  }
+}
+
+

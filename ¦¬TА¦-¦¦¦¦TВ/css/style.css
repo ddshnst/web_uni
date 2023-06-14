@@ -1,0 +1,445 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face {
+    font-family: "FormularLight";
+    src: url("../fonts/FormularLight/FormularLight.eot");
+    src: url("../fonts/FormularLight/FormularLight.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularLight/FormularLight.woff") format("woff"), url("../fonts/FormularLight/FormularLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "FormularMedium";
+    src: url("../fonts/FormularMedium/FormularMedium.eot");
+    src: url("../fonts/FormularMedium/FormularMedium.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularMedium/FormularMedium.woff") format("woff"), url("../fonts/FormularMedium/FormularMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "FormularBold";
+    src: url("../fonts/FormularBold/FormularBold.eot");
+    src: url("../fonts/FormularBold/FormularBold.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularBold/FormularBold.woff") format("woff"), url("../fonts/FormularBold/FormularBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "FormularLight";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: black;
+    background: url(../img/fonn.jpg) no-repeat center;
+    background-size: cover;
+
+}
+
+
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1160px;
+    
+}
+
+.wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+
+/*Header start*/
+.header {
+    /*    position: absolute; Возможно нужно для корректного отображения фона*/
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header_wrapper {
+    display: flex; /*Размещает елемены в строку*/
+    flex-wrap: wrap; /*Позволяет размещать жлементы в несколько рядов*/
+    align-items: center; /*По оси выравнивание по центру*/
+    justify-content: space-evenly;
+    margin-top: 4px;
+    
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/*
+@media screen {
+    .header_wrapper{
+        flex-direction: column;
+    }
+}
+*/
+
+/*Кнопка поиска*/
+.group {
+    display: flex;
+    line-height: 24px;
+    align-items: center;
+    position: relative;
+    max-width: 140px;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+    .input::placeholder {
+        color: #9e9ea7;
+    }
+
+    .input:focus, input:hover {
+        outline: none;
+        border-color: rgba(72, 219, 232, 0.4);
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(59, 157, 218, 0.1);
+    }
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.header_logo {
+    margin-right: 5px; /*Чтобы при уменьшении экрана об институте не наезжал на логотип*/
+}
+
+
+.header_list {
+    display: flex; /*Список был в строчке*/
+    flex-wrap: wrap;
+}
+
+.header_items {
+    margin-right: 30px;
+    height: 30px;
+    margin-top: 4px;
+}
+
+.header_link {
+    font-family: 'Formular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    text-decoration: none;
+}
+/*Header end*/
+
+
+
+
+
+/*Intra start*/
+.intro_2{
+    padding-top: 50px;
+}
+
+.intro{
+    min-height: 100vh;
+    padding-top: 170px;
+}
+/*Intra end*/
+figure{
+	text-align: center;
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+/* внешние границы таблицы серого цвета толщиной 1px */
+table {
+   border: 1px solid #21BECE;
+}
+/* границы ячеек первого ряда таблицы */
+th {
+   border: 1px solid #21BECE;
+	 	 width: 390px;
+}
+/* границы ячеек тела таблицы */
+td {
+   border: 1px solid #21BECE;
+
+}
+/* сделает ширину таблицы равной ширине блока контейнера, в котором она находится */
+table {
+    width: 100%;
+ }
+ /* задаст фиксированную ширину для таблицы */
+ table {
+    width: 600px;
+ }
+.wrapper{
+	clear: both;
+	width: 100%;
+}
+
+.table1{
+	width: 31%;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 200px;
+}
+.table2{
+	width: 31%;
+    float: left;
+    margin-bottom: 200px;
+}
+.table3{
+	width: 31%;
+    float: left;
+    margin-left: 15px;
+    margin-bottom: 200px;
+}
+/*
+flex-wrap: wrap;
+}
+*/
+.card{
+  font-size: 40px;
+  font-weight: 400;
+  color: black;
+}
+
+
+.card {
+  display: block;
+  position: relative;
+  width: 80%;
+  height: 415px;
+  background-color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  border-radius: 30px; 
+  padding: 32px 24px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+
+}
+
+.card p{
+  width: 60%;
+  float: left;
+  text-align: left;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.cards_preuni{
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+}
+.btn-preuni{
+    float: left;
+    border: none;
+    background: none;  
+    color:#21BECE; 
+}
+.btn-preuni:hover{
+    color:#000;
+}
+.img_preuni{
+    float:right;
+    padding-right: 200px;
+    padding-left: 0px;
+    margin-left: 0px;
+    margin-top: 15px;
+    margin-bottom: 300px;
+    margin-right: 0px;
+    width: 20%;
+}
+.names-preuni{
+    padding-bottom: 30px;
+}
+
+.cards-part{
+    margin-top: 200px;
+}
+.card-part{
+    display: flex;
+    width: 1092px;
+    height: 460px;
+    background-color: #21BECE;
+    border: 2px solid #21BECE;
+    border-radius: 30px; 
+    padding: 32px 24px;
+    margin: 12px;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+
+}
+.names-part{
+    float: center;
+    text-align: center;
+    padding-bottom: 30px;
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.text_why{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.card-part p{
+    width: 60%;
+  float: left;
+  text-align: center;
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.btn-p{
+    margin-top: 10px;
+    text-align: center;
+}
+.btn-part {
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 370px;
+    height: 90px;
+    background-color: #e8fafc;
+    border-radius: 45px;
+    border: none;
+    box-shadow: -4px 8px 9px 1px rgba(210, 229, 231, .50);
+   }
+   
+   .btn-part:disabled {
+    pointer-events: none;
+   }
+   
+   .btn-part:hover {
+    color: #21BECE;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+   }
+   
+   .btn-part:active {
+    box-shadow: none;
+    transform: translateY(0);
+   }
+   .footer{
+    background-color: #d9d9d9;
+   }
+   .floor-item1{
+    vertical-align: top;
+    color: #a5a5a5;
+    margin-top: 30px;
+    margin-left: 100px;
+    float: left;
+   }
+   .floor-item2{
+    color: #a5a5a5;
+    margin-top: 30px;
+    margin-right: 100px;
+    float: right;
+   }
+   .floor-item3{
+    color: #a5a5a5;
+    background-color: #d9d9d9;
+    float: left;
+    width: 100%;
+   }
+   .footer-pic{
+    width: 100%;
+   }
+   .img_footer{
+    width: 20px;
+    margin-top: 30px;
+   }
+
+.info-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,0 +1,343 @@
+/*Обнуление настроек отображения сайта в браузере*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* Сброс настроек для HTML5 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*Подключение шрифтов*/
+@font-face {
+    font-family: "Formular";
+    src: url("../fonts/Formular/ofont.ru_Formular.eot");
+    src: url("../fonts/Formular/ofont.ru_Formular.eot?#iefix")format("embedded-opentype"), url("../fonts/Formular/ofont.ru_Formular.woff") format("woff"), url("../fonts/Formular/ofont.ru_Formular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Formular";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: black;
+    background: url(../img/fonn.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.wrapper1 {
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/*Header start*/
+
+.header {
+    /*    position: absolute; Возможно нужно для корректного отображения фона*/
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header_wrapper {
+    display: flex; /*Размещает елемены в строку*/
+    flex-wrap: wrap; /*Позволяет размещать жлементы в несколько рядов*/
+    align-items: center; /*По оси выравнивание по центру*/
+    justify-content: space-evenly;
+    margin-top: 4px;
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/*Кнопка поиска*/
+.group {
+    display: flex;
+    line-height: 24px;
+    align-items: center;
+    position: relative;
+    max-width: 140px;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+    .input::placeholder {
+        color: #9e9ea7;
+    }
+
+    .input:focus, input:hover {
+        outline: none;
+        border-color: rgba(72, 219, 232, 0.4);
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(59, 157, 218, 0.1);
+    }
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.header_logo {
+    margin-right: 5px; /*Чтобы при уменьшении экрана об институте не наезжал на логотип*/
+}
+
+
+.header_list {
+    display: flex; /*Список был в строчке*/
+    flex-wrap: wrap;
+}
+
+.header_items {
+    margin-right: 30px;
+    height: 30px;
+    margin-top: 4px;
+}
+
+.header_link {
+    font-family: 'Formular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000;
+    text-decoration: none;
+}
+/*Intra end*/
+
+a:active, /* активная/посещенная ссылка */
+a:hover, /* при наведении */
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+
+
+.container {
+    clear: both; /*Удаляет последствия использования float: left; (там типа разметка сначала начинается и поэтому блоки накладываюся)*/
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1160px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+/*Вся новостная карточка*/
+.new {
+    /*    border: 2px solid black;*/
+    max-width: 550px;
+    width: 100%;
+    min-height: 300px;
+    border-radius: 30px;
+    float: left;
+    margin: 8px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+    .new:hover {
+        border: 1px solid #21BECE;
+        transform: scale(1.03);
+    }
+
+    .new:active {
+        transform: scale(0.9);
+    }
+
+    .new:hover .card{
+        background: #21BECE;
+    }
+
+    .new:hover .data {
+        color: #FFFFFF;
+    }
+
+    .new:hover .text {
+        color: #FFFFFF;
+    }
+
+    .new:hover .teg {
+        height: 15px;
+        width: 115px;
+        background-image: url(../img/logo1.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+/*Белая рамка на фотке*/
+.card {
+    /*    display: flex;*/
+    max-width: 480px;
+    width: 100%;
+    min-height: 120px;
+    border-radius: 30px;
+    background: #FFFFFF;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 160px;
+}
+
+/*Блок, в котором лежит дата и тег*/
+.wrapper {
+    clear: both;
+    font-size: 12px;
+    height: 30px;
+    max-width: 480px;
+    width: 100%;
+    /*    background: red;*/
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.teg {
+    float: left;
+    height: 15px;
+    width: 115px;
+    background-image: url(../img/logo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.data {
+    display: block;
+    float: right;
+    height: 20px;
+}
+/*Заголовок внутри новостной карточки*/
+.text {
+    display: block;
+    max-width: 460px;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+/*Для заголовка ВСЕ НОВОСТИ*/
+.title {
+    width: 100%;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    font-size: 40px;
+    text-align: center;
+    font-family: Formular;
+}
+
+/*Пагинация*/
+.paginator {
+    display: flex;
+    justify-content: center;
+}
+
+.pag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin: 2px;
+    border-radius: 10px;
+}
+    .pag:hover {
+        background: #21BECE;
+    }
+
+.numbers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin: 2px;
+    border-radius: 10px;
+}
+    .numbers:hover {
+        background: #21BECE;
+    }
+.number:focus {
+    background: #21BECE;
+}
+
+.acct {
+    display: flex;
+    background: #21BECE;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin: 2px;
+    border-radius: 10px;
+}
+
+
+
+
+

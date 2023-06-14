@@ -1,0 +1,270 @@
+/*Обнуление настроек отображения сайта в браузере*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* Сброс настроек для HTML5 */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*Подключение шрифтов*/
+@font-face {
+    font-family: "Formular";
+    src: url("../fonts/Formular/ofont.ru_Formular.eot");
+    src: url("../fonts/Formular/ofont.ru_Formular.eot?#iefix")format("embedded-opentype"), url("../fonts/Formular/ofont.ru_Formular.woff") format("woff"), url("../fonts/Formular/ofont.ru_Formular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+* {
+    font-family:FormularMedium;
+}
+body {
+    font-family: "Formular";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: black;
+}
+
+/*Все событие*/
+.h22 {
+    font-family: Formular;
+    font-size: 32px;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 1050px) {
+    .event {
+        font-family: Formular;
+        display: flex;
+        background: #FFFFFF;
+        max-width: 390px;
+        width:100%;
+        min-height: 100px;
+        margin-left: auto;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        border: 2px solid #21BECE;
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 1050px) {
+    .event {
+        font-family: Formular;
+        display: flex;
+        background: #FFFFFF;
+        max-width: 450px;
+        width: 100%;
+        min-height: 100px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        border: 2px solid #21BECE;
+        justify-content: space-evenly;
+    }
+}
+.event:hover {
+    border: 1px solid #21BECE;
+    transform: scale(1.03);
+    background: #21BECE;
+}
+
+.event:active {
+    transform: scale(0.9);
+}
+
+.event:hover .date_event {
+    color: #FFFFFF;
+}
+
+.event:hover .information {
+    color: #FFFFFF;
+}
+
+/*Объединение числа и месяца*/
+.date_event {
+    display: flex;
+    /*    align-items: center;*/
+    flex-wrap: wrap;
+    height: 75px;
+    width: 75px;
+    margin: 12px;
+    color: #101010;
+}
+
+.day {
+    flex-basis: 100%;
+    font-size: 48px;
+    height: 50px;
+    width: 75px;
+    text-align: center;
+    font-family: 'Formular';
+}
+
+.mounth {
+    font-size: 16px;
+    flex-basis: 100%;
+    height: 25px;
+    width: 75px;
+    text-align: center;
+}
+
+/*объединение заголовка новости и тектса*/
+.information {
+    
+    display: flex;
+    /*margin-bottom: 5px;
+        align-items: center;
+    flex-wrap: wrap;
+    height: 75px;*/
+    font-size: 16px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 70%;
+}
+/*
+.title_event {
+    flex-basis: 100%;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.text_event {
+    font-size: 16px;
+    flex-basis: 100%;
+}
+*/
+
+/*Новости*/
+/*a:active,  активная/посещенная ссылка */
+/*a:hover,  при наведении */
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+@media (min-width: 1050px) {
+    .new {
+        font-family: Formular;
+        display: flex;
+        background: #FFFFFF;
+        max-width: 390px;
+        width: 100%;
+        min-height: 100px;
+        margin-left: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        border: 2px solid #21BECE;
+        color: black;
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width: 1050px) {
+    .new {
+        font-family: Formular;
+        display: flex;
+        background: #FFFFFF;
+        max-width: 450px;
+        width: 100%;
+        min-height: 100px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        border: 2px solid #21BECE;
+        color: black;
+        justify-content: space-evenly;
+    }
+}
+
+.new:hover {
+    border: 1px solid #21BECE;
+    transform: scale(1.03);
+    background: #21BECE;
+}
+
+.new:active {
+    transform: scale(0.9);
+}
+
+.new:hover .title_new {
+    color: #FFFFFF;
+}
+
+
+
+.img_new {
+    float: left;
+    height: 80px;
+    width: 80px;
+    border-radius: 25px;
+    margin: auto;
+}
+
+.title_new {
+    font-size: 16px;
+    float: left;
+    width: 70%;
+    margin: auto;
+}

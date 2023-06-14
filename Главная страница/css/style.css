@@ -1,0 +1,786 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+
+@font-face {
+    font-family: "FormularLight";
+    src: url("../fonts/FormularLight/FormularLight.eot");
+    src: url("../fonts/FormularLight/FormularLight.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularLight/FormularLight.woff") format("woff"), url("../fonts/FormularLight/FormularLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "FormularMedium";
+    src: url("../fonts/FormularMedium/FormularMedium.eot");
+    src: url("../fonts/FormularMedium/FormularMedium.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularMedium/FormularMedium.woff") format("woff"), url("../fonts/FormularMedium/FormularMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "FormularBold";
+    src: url("../fonts/FormularBold/FormularBold.eot");
+    src: url("../fonts/FormularBold/FormularBold.eot?#iefix")format("embedded-opentype"), url("../fonts/FormularBold/FormularBold.woff") format("woff"), url("../fonts/FormularBold/FormularBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "FormularLight";
+    font-style: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: normal;
+    color: black;
+    background: url(../img/fonn.jpg) no-repeat center;
+    background-size: cover;
+
+}
+
+
+.main{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1160px;
+    
+}
+
+.wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
+
+
+/*Header start*/
+.header {
+    /*    position: absolute; Возможно нужно для корректного отображения фона*/
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.header_wrapper {
+    display: flex; /*Размещает елемены в строку*/
+    flex-wrap: wrap; /*Позволяет размещать жлементы в несколько рядов*/
+    align-items: center; /*По оси выравнивание по центру*/
+    justify-content: space-evenly;
+    margin-top: 4px;
+    
+    border-radius: 30px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+/*
+@media screen {
+    .header_wrapper{
+        flex-direction: column;
+    }
+}
+*/
+
+/*Кнопка поиска*/
+.group {
+    display: flex;
+    line-height: 24px;
+    align-items: center;
+    position: relative;
+    max-width: 140px;
+}
+
+.input {
+    width: 100%;
+    height: 30px;
+    line-height: 28px;
+    padding: 0 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+
+    .input::placeholder {
+        color: #9e9ea7;
+    }
+
+    .input:focus, input:hover {
+        outline: none;
+        border-color: rgba(72, 219, 232, 0.4);
+        background-color: #fff;
+        box-shadow: 0 0 0 4px rgba(59, 157, 218, 0.1);
+    }
+
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+}
+
+.header_logo {
+    margin-right: 5px; /*Чтобы при уменьшении экрана об институте не наезжал на логотип*/
+}
+
+
+.header_list {
+    display: flex; /*Список был в строчке*/
+    flex-wrap: wrap;
+}
+
+.header_items {
+    margin-right: 30px;
+    height: 30px;
+    margin-top: 4px;
+}
+
+.header_link {
+    font-family: 'Formular';
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    text-decoration: none;
+}
+/*Header end*/
+
+
+
+
+
+/*Intra start*/
+.intro{
+    min-height: 100vh;
+    padding-top: 170px;
+}
+
+.intro_titel{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    max-width: 583px;
+    text-align: center;
+    letter-spacing: 0.085em;
+    color: #000;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 31px;
+}
+
+.intro_subtitel{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 43px;
+}
+
+.image-button{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    width: 370px;
+    height: 90px;
+    background-color: #21BECE;
+    border-radius: 45px;
+    border: none;
+    box-shadow: -4px 8px 9px 1px rgba(33, 190, 206, .50);
+}
+/*Intra end*/
+
+
+
+
+
+/*Events start*/
+.all_events{
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center; 
+    background-position: center center;
+    margin-bottom: 136px;
+    
+}
+
+
+/*Left part of events start*/
+.rectangle_1 {
+    float: left;
+	width: 580px;
+	height: 327px;
+    background: rgba(33,190,206,1);
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
+}
+
+.text{
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    max-width: 526px;
+    max-height: 292px;
+    margin: 0 auto;
+}
+
+.day_todey{
+    justify-content: space-between;
+    display: flex; /*Размещает елемены в строку*/
+    flex-wrap: wrap; /*Позволяет размещать жлементы в несколько рядов*/
+}
+
+.all_text{
+    float: left;
+}
+
+.text_in{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    padding-top: 36px;
+    max-width: 371px;
+    /* identical to box height */
+    margin-bottom: 22px;
+    color: #FFFFFF;
+}
+
+.text_text_in{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    max-width: 360px;
+    color: #FFFFFF;
+
+}
+
+.text_text_text_in{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 24px;
+    color: #FFFFFF;
+}
+
+.button_1{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    width: 212.62px;
+    height: 38px;
+    color: #000000;
+    background-color: #FFFFFF;
+    border-radius: 45px;
+    border: none;
+    box-shadow: -5px 3px 13px 1px rgba(220, 237, 239, 0.5);
+}
+
+.all_data{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-end;
+}
+
+.date{
+    flex-basis: 100%;
+    color: rgba(255,255,255,1);
+    float: right;
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 92px;
+    
+}
+
+.month{
+    flex-basis: 100%;
+    font-family: 'Formular';
+    font-style: normal;
+    font-size: 20px;
+    color: rgba(255,255,255,1);
+    text-align: center;
+    font-weight: 65;
+}
+/*Left part of events end*/
+
+
+/*Right part of events start*/
+.rectangle_2 {
+    float: right;
+	width: 580px;
+	height: 327px;
+	background: rgb(255, 255, 255);
+    left: 760px;
+    border: 2px solid rgba(0,0,0,1);
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    
+}
+
+.text_2{
+    max-width: 526px;
+    max-height: 292px;
+    margin: 0 auto;
+}
+
+.day_todey_2{
+    justify-content: space-between;
+    display: flex; 
+    flex-wrap: wrap; /*Позволяет размещать жлементы в несколько рядов*/
+}
+
+.all_text_2{
+    float: left;
+}
+
+.text_in_2{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 49px;
+    padding-top: 36px;
+    /* identical to box height */
+    margin-bottom: 22px;
+    color: #000000;
+}
+
+.text_text_in_2{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 15px;
+    max-width: 360px;
+    color: #000000;
+
+}
+
+.text_text_text_in_2{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    margin-bottom: 24px;
+    color: #000000;
+}
+
+.button_2{
+    width: 212.62px;
+    height: 38px; 
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    background-color: #21BECE;
+    border-radius: 45px;
+    border: none;
+    box-shadow: -5px 3px 13px 1px rgba(33, 190, 206, .50);
+}
+
+.all_data_2{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-end;
+}
+
+.date_2{
+    flex-basis: 100%;
+    font-family: 'Formular';
+    font-style: normal;
+    font-size: 92px;
+    color: rgb(0, 0, 0);
+    float: right;
+    font-weight: 400;
+}
+
+.month_2{
+    flex-basis: 100%;
+    font-family: 'Formular';
+    font-style: normal;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    float: right;
+    font-weight: 65;
+}
+/*Events end*/
+
+
+
+
+
+/*Who u start*/
+.who_u{
+    min-height: 100vh;
+    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-position: center center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 156px;
+    
+}
+
+.who_a_u{
+    max-width: 1160px;
+}
+
+.all_all{
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    width: 100%;
+}
+
+.cards_activities{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.cards_activities_2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.img_who{
+    float: right;
+}
+
+  /*All about animation start*/
+  .card img {
+    margin-right: 0;
+  }
+  
+  .go-corner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 4px;
+    right: 4px;
+    background-color: #21BECE;
+    border-radius: 0 4px 0 32px;
+  }
+  
+  .go-arrow {
+    margin-top: 0;
+    margin-right: 0;
+    color: white;
+  }
+  
+  .card {
+    display: block;
+    position: relative;
+    width: 555px;
+    height: 300px;
+    background-color: white;
+    border: 2px solid #21BECE;
+    border-radius: 30px; 
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+    font-size: 40px;
+    font-weight: 400;
+    color: black;
+  }
+  
+  .card:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #21BECE;
+    color: white;
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out; 
+  }
+  .card:hover{  
+    color: #fff;
+    transition: 0.35s;
+  }
+  .card p{
+    width: 298px;
+    float: right;
+    text-align: top;
+  }
+  .card:hover:before {
+    transform: scale(21);
+  }
+  /*All about animation end*/
+/*Who u end*/
+
+
+
+
+
+/*Titlt start*/
+.intro_title_1{ 
+    font-family: 'Formular'; 
+    font-style: normal; 
+    font-weight: 400; 
+    font-size: 40px; 
+    line-height: 49px; 
+    text-align: center; 
+    letter-spacing: 0.085em; 
+    color: rgba(0, 0, 0, 0.5); 
+    margin-bottom: 50px; 
+}
+/*Titlt end*/
+
+
+
+
+
+/*News start*/
+.news_all{
+    flex-wrap: wrap;
+}
+
+.aallll{
+    margin-bottom: 156px;
+    flex-wrap: wrap;
+}
+
+.app_aallll{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.card_news{
+    width: 575px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: blue;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.down_aallll{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card_news_2{
+    display: flex;
+    margin-bottom: 10px;
+    width: 378px;
+    height: 300px;
+    border-radius: 30px;
+    background-color: blue;
+}
+/*News end*/
+
+
+
+
+
+/*Numbers start*/
+
+.chifri{
+    margin-bottom: 156px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.uni_chi{
+    display: flex; /*Список был в строчке*/
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.img_chi{
+    margin-bottom: 5px;
+    min-width: 270px;
+}
+
+.text_chi{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+}
+/*Numbers end*/
+
+
+
+
+
+/*Partners start*/
+.partners_all{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.first_str{
+    flex-wrap: wrap;
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 3px;
+    justify-content: space-around;
+}
+
+.second_str{
+    flex-wrap: wrap;
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;
+    justify-content: space-between;
+}
+
+.third_str{
+    flex-wrap: wrap;
+    display: flex;
+    
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8px;   
+    justify-content: space-between;
+}
+
+.img_p{
+    display: flex; /*Список был в строчке*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    min-width: 150px;
+    max-height: 81px;
+}
+/*Partners end*/
+
+@media screen and (max-width: 650px){
+    .cards_activities{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 600px;
+    }
+
+    .cards_activities_2{
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 600px;
+    }
+}
