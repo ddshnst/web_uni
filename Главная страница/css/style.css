@@ -357,6 +357,7 @@ body {
     border-radius: 45px;
     border: none;
     box-shadow: -5px 3px 13px 1px rgba(220, 237, 239, 0.5);
+
 }
 
 .all_data{
@@ -732,6 +733,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    align-items: stretch;
 }
 
 .first_str{
@@ -767,7 +769,7 @@ body {
 .img_p{
     display: flex; /*Список был в строчке*/
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-bottom: 5px;
     min-width: 150px;
     max-height: 81px;
