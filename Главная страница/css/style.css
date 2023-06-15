@@ -213,7 +213,7 @@ body {
 /*Intra start*/
 .intro{
     min-height: 100vh;
-    padding-top: 170px;
+    padding-top: 145px;
 }
 
 .intro_titel{
@@ -245,6 +245,10 @@ body {
     margin-bottom: 43px;
 }
 
+.hr{
+    text-decoration: none;
+}
+
 .image-button{
     font-family: 'Formular';
     font-style: normal;
@@ -259,12 +263,32 @@ body {
     background-color: #21BECE;
     border-radius: 45px;
     border: none;
-    
     box-shadow: -4px 8px 9px 1px rgba(33, 190, 206, .50);
 }
 
-.href_abit{
+.image-button{
     text-decoration: none;
+}
+
+.image-button:disabled {
+    pointer-events: none;
+}
+   
+.image-button:hover {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    color: #000000;
+    background-color: #3bdbf0;
+    box-shadow: -4px 8px 9px 1px rgba(2, 200, 222, 0.5);
+    transform: translateY(-2px);
+    
+}
+   
+.image-button:active {
+    box-shadow: none;
+    transform: translateY(0);
+    
 }
 /*Intra end*/
 
