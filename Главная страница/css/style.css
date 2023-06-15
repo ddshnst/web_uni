@@ -366,6 +366,7 @@ body {
     flex-direction: column;
     align-content: center;
     align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .date{
@@ -476,6 +477,7 @@ body {
     flex-direction: column;
     align-content: center;
     align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .date_2{
@@ -544,7 +546,8 @@ body {
 }
 
 .img_who{
-    float: right;
+    display: flex;
+    justify-content: flex-end;
 }
 
   /*All about animation start*/
