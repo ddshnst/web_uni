@@ -88,7 +88,7 @@ body {
     line-height: 1.2;
     font-weight: normal;
     color: black;
-    background: url(../img/fonn.jpg) no-repeat center;
+    background: url(../img/фон.jpg) no-repeat center;
     background-size: cover;
 
 }
@@ -259,7 +259,12 @@ body {
     background-color: #21BECE;
     border-radius: 45px;
     border: none;
+    
     box-shadow: -4px 8px 9px 1px rgba(33, 190, 206, .50);
+}
+
+.href_abit{
+    text-decoration: none;
 }
 /*Intra end*/
 
@@ -513,7 +518,9 @@ body {
     margin-bottom: 156px;
 }
 
-
+.href__{
+    text-decoration: none;
+}
 
 .all_all{
     display: flex;
