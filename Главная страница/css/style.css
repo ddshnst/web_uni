@@ -508,21 +508,12 @@ body {
 
 /*Who u start*/
 .who_u{
-    min-height: 100vh;
-    
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    background-position: center center;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 156px;
-    
 }
 
-.who_a_u{
-    max-width: 1160px;
-}
+
 
 .all_all{
     display: flex;
@@ -531,20 +522,14 @@ body {
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
-    width: 100%;
 }
 
 .cards_activities{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.cards_activities_2{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
 
 .img_who{
     display: flex;
@@ -555,10 +540,20 @@ body {
   .card img {
     margin-right: 0;
   }
+  .cards_activities { /*аналогчино предыдущему блоку про социальные медиа*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    font-weight: 400;
+    color: black;
+  }
+  
   
   .go-corner {
-    display: flex;
-    align-items: center;
+    display: block;
     justify-content: center;
     position: absolute;
     width: 32px;
@@ -570,16 +565,12 @@ body {
     border-radius: 0 4px 0 32px;
   }
   
-  .go-arrow {
-    margin-top: 0;
-    margin-right: 0;
-    color: white;
-  }
   
   .card {
-    display: block;
+    display: flex;
     position: relative;
-    width: 555px;
+    max-width: 500px;
+    width: 100%;
     height: 300px;
     background-color: white;
     border: 2px solid #21BECE;
@@ -590,12 +581,10 @@ body {
     z-index: 0;
     overflow: hidden;
     box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
-    font-size: 40px;
-    font-weight: 400;
-    color: black;
+  
   }
   
-  .card:before {
+  .card:before { /*описание стилей для анимации карточки*/
     content: "";
     position: absolute;
     z-index: -1;
@@ -615,9 +604,15 @@ body {
     transition: 0.35s;
   }
   .card p{
-    width: 298px;
+    margin: 0 0 10px 0;
+  
+  }
+  .card_img{
+    max-width:289px;
+    width: 100%;
     float: right;
-    text-align: top;
+    align-self: center;
+    margin-left: 100px;
   }
   .card:hover:before {
     transform: scale(21);
@@ -775,7 +770,7 @@ body {
     max-height: 81px;
 }
 /*Partners end*/
-
+/*
 @media screen and (max-width: 650px){
     .cards_activities{
         display: flex;
@@ -788,4 +783,4 @@ body {
         flex-wrap: wrap;
         max-width: 600px;
     }
-}
+}*/
