@@ -275,9 +275,17 @@ white-space: normal;
 .message_grey{
   display: flex;
   flex-direction: row-reverse; 
+  font-family: 'Formular';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
 }
 .message_tiffani{
-  display: flex;  
+  display: flex; 
+  font-family: 'Formular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px; 
 }
 
 .cards_stip{ /*здесь все для того чтоб сайт был адаптивен*/
@@ -412,6 +420,10 @@ white-space: normal;
     margin-top: 10px;
     margin-right: 10px;
     color: #21BECE;
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
   }
 
 .subscribe { /*блок с рекомендациями к подписке*/
@@ -426,6 +438,10 @@ white-space: normal;
    text-align: center;
    margin-top: 10px;
    font-size: 20px;
+   font-family: 'Formular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
   }
 
 .social_media_links { /*так же это все для адаптивности*/
@@ -451,6 +467,10 @@ white-space: normal;
 .social_media_text {
   margin-top: 5px;
   text-align: center;
+  font-family: 'Formular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 
@@ -464,6 +484,10 @@ white-space: normal;
 .card {
   font-weight: 400;
   color: black;
+  font-family: 'Formular';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
 }
 
 

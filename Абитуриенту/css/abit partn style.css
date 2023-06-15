@@ -205,7 +205,10 @@ body {
 /*Header end*/
 
 
-
+.fm{
+    display: flex;
+    align-items: center;
+}
 
 
 /*Intra start*/
@@ -215,7 +218,8 @@ body {
 
 .intro{
     min-height: 100vh;
-    padding-top: 170px;
+    padding-top: 0px;
+    margin-bottom: 40px;
 }
 /*Intra end*/
 figure{
@@ -336,6 +340,7 @@ flex-wrap: wrap;
 }
 .card-part{
     display: flex;
+    align-items: center;
     width: 1092px;
     height: 460px;
     background-color: #21BECE;
@@ -438,8 +443,123 @@ flex-wrap: wrap;
     margin-top: 30px;
    }
 
+.img_part{
+    display: flex;
+}
+
 .info-part{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
 }
+
+.intro_title{
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 0.085em;
+    color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px;
+}
+
+.cards_activities { /*аналогчино предыдущему блоку про социальные медиа*/
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    font-weight: 400;
+    color: black;
+    font-family: 'Formular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+  }
+  
+  
+  .go-corner {
+    display: block;
+    justify-content: center;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    top: 4px;
+    right: 4px;
+    background-color: #21BECE;
+    border-radius: 0 4px 0 32px;
+  }
+  
+  
+  .card {
+    display: flex;
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    background-color: white;
+    border: 2px solid #21BECE;
+    border-radius: 30px; 
+    padding: 32px 24px;
+    margin: 12px;
+    text-decoration: none;
+    z-index: 0;
+    overflow: hidden;
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2);
+  
+  }
+  
+  .card:before { /*описание стилей для анимации карточки*/
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #21BECE;
+    color: white;
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out; 
+  }
+  .card:hover{  
+    color: #fff;
+    transition: 0.35s;
+  }
+  .card p{
+    margin: 0 0 10px 0;
+  
+  }
+  .card_img{
+    max-width:289px;
+    width: 100%;
+    float: right;
+    align-self: center;
+    margin-left: 100px;
+  }
+  .card:hover:before {
+    transform: scale(21);
+  }
+  
+  
+  @media only screen and (min-width:240px) and (max-width: 767px){
+    .box-small{
+        width: 30%;
+        display: block;
+        float: none;
+        margin-right: 20px;
+    }
+    .intro_title{
+      font-size: 30px;
+    }
+  }
+  
